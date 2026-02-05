@@ -6,6 +6,9 @@
     "build": "npm --workspace frontend run build",
     "dev": "npm --workspace frontend run dev"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "overrides": {
     "rollup": "npm:@rollup/wasm-node@4.55.1"
   }
