@@ -22,3 +22,4 @@ dist/
 data/
 backend/data/
 backend/src/storage/uploads/
+!frontend/src/data/**
