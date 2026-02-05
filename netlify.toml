@@ -1,0 +1,30 @@
+[build]
+  base = "frontend"
+  command = "npm run build"
+  publish = "dist"
+  functions = "../backend/netlify/functions"
+
+[dev]
+  command = "npm run dev"
+  port = 5173
+  targetPort = 5173
+  functionsPort = 8888
+
+[functions."email-queue"]
+  schedule = "*/1 * * * *"
+
+[functions."export-queue"]
+  schedule = "*/5 * * * *"
+
+[functions."automation-scheduler"]
+  schedule = "*/5 * * * *"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

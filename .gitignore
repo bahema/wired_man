@@ -1,0 +1,24 @@
+# Logs
+*.log
+*.log.*
+backend/.dev*.log
+
+# Databases
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# Environment files
+.env
+.env.*
+
+# Dependencies and build outputs
+node_modules/
+dist/
+.vscode/
+
+# App data & uploads
+data/
+backend/data/
+backend/src/storage/uploads/
