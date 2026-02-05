@@ -1,6 +1,6 @@
 # IMPORTANT: Base directory must be repo root (leave blank in Netlify UI).
 [build]
-  command = "npm ci --include=optional && npm --workspace frontend run build"
+  command = "ROLLUP_SKIP_NATIVE=1 npm ci --include=optional && ROLLUP_SKIP_NATIVE=1 npm --workspace frontend run build"
   publish = "frontend/dist"
 
 [functions]
