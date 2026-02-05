@@ -1,6 +1,6 @@
 # IMPORTANT: Base directory must be repo root (leave blank in Netlify UI).
 [build]
-  command = "npm ci && npm run build"
+  command = "npm ci && npm --workspace frontend install --include=optional && npm --workspace frontend run build"
   publish = "frontend/dist"
 
 [build.environment]
