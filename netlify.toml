@@ -1,11 +1,14 @@
+# IMPORTANT: Base directory must be repo root (leave blank in Netlify UI).
 [build]
-  base = "frontend"
-  command = "npm run build"
-  publish = "dist"
-  functions = "../backend/netlify/functions"
+  command = "npm ci && npm --workspace frontend run build"
+  publish = "frontend/dist"
+
+[functions]
+  directory = "backend/netlify/functions"
+  node_bundler = "esbuild"
 
 [dev]
-  command = "npm run dev"
+  command = "npm --workspace frontend run dev"
   port = 5173
   targetPort = 5173
   functionsPort = 8888
