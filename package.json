@@ -4,7 +4,8 @@
   "workspaces": ["frontend", "backend"],
   "scripts": {
     "build": "npm --workspace frontend run build",
-    "dev": "npm --workspace frontend run dev"
+    "dev": "npm --workspace frontend run dev",
+    "preflight": "npm --workspace backend run build && node scripts/resolver-check.js"
   },
   "engines": {
     "node": "20.x"
