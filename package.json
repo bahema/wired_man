@@ -5,5 +5,8 @@
   "scripts": {
     "build": "npm --workspace frontend run build",
     "dev": "npm --workspace frontend run dev"
+  },
+  "overrides": {
+    "rollup": "npm:@rollup/wasm-node@4.55.1"
   }
 }
