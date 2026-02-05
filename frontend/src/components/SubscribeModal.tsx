@@ -233,6 +233,7 @@ export default function SubscribeModal({ onSubscribed }: SubscribeModalProps) {
               required
               value={form.name}
               onChange={(event) => setForm((prev) => ({ ...prev, name: event.target.value }))}
+              className="w-full"
             />
             <Input
               label="Email"
@@ -242,6 +243,7 @@ export default function SubscribeModal({ onSubscribed }: SubscribeModalProps) {
               required
               value={form.email}
               onChange={(event) => setForm((prev) => ({ ...prev, email: event.target.value }))}
+              className="w-full"
             />
             <Input
               label="Phone (optional)"
@@ -249,6 +251,7 @@ export default function SubscribeModal({ onSubscribed }: SubscribeModalProps) {
               placeholder={`Phone or WhatsApp (${selectedCountry.dial})`}
               value={form.phone}
               onChange={(event) => setForm((prev) => ({ ...prev, phone: event.target.value }))}
+              className="w-full"
             />
             <label className="grid gap-2 text-xs text-slate-600 sm:text-sm">
               <span className="font-medium text-slate-700">Country (optional)</span>
@@ -273,7 +276,7 @@ export default function SubscribeModal({ onSubscribed }: SubscribeModalProps) {
             </label>
             <label className="grid gap-2 text-xs text-slate-600 sm:text-sm">
               <span className="font-medium text-slate-700">Interests (required)</span>
-              <div className="flex flex-wrap gap-2">
+              <div className="grid gap-2 sm:flex sm:flex-wrap">
                 {interestOptions.map((option) => (
                   <label key={option} className="inline-flex items-center gap-2">
                     <input
@@ -317,8 +320,8 @@ export default function SubscribeModal({ onSubscribed }: SubscribeModalProps) {
               {errorMessage}
             </div>
           ) : null}
-            <div className="flex justify-end">
-              <Button type="submit" size="lg" disabled={submitting}>
+            <div className="flex w-full justify-end">
+              <Button type="submit" size="lg" disabled={submitting} className="w-full sm:w-auto">
                 {submitting ? 'Submitting...' : modalCopy.ctaLabel}
               </Button>
             </div>
