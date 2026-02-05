@@ -262,7 +262,7 @@ export default function SubscribeModal({ onSubscribed }: SubscribeModalProps) {
                     phone: prev.phone.trim() ? prev.phone : `${next?.dial ?? ''} `
                   }));
                 }}
-                className="rounded-xl border border-border-subtle bg-panel-elevated px-3 py-2 text-sm text-slate-900 shadow-sm dark:border-slate-700/70 dark:bg-slate-900/80 dark:text-slate-100"
+                className="w-full rounded-xl border border-border-subtle bg-panel-elevated px-3 py-2 text-sm text-slate-900 shadow-sm dark:border-slate-700/70 dark:bg-slate-900/80 dark:text-slate-100"
               >
                 {countryOptions.map((country) => (
                   <option key={country.code} value={country.code}>
